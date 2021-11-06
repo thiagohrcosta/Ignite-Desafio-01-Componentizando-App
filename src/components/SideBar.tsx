@@ -7,21 +7,17 @@ interface SideBarProps {
 }
 
 interface GenreResponseProps {
-    id: number;
-    name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-    title: string;
+  id: number;
+  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
+  title: string;
 }
 
 export function SideBar(props: SideBarProps) {
-
   return (
-
     <nav className="sidebar">
       <span>Watch<p>Me</p></span>
-
       <div className="buttons-container">
-      {props.genres.map(genre => ( 
-
+        {props.genres.map(genre => (
           <Button
             key={String(genre.id)}
             title={genre.title}
@@ -29,10 +25,8 @@ export function SideBar(props: SideBarProps) {
             onClick={() => props.handleClickButton(genre.id)}
             selected={props.selectedGenreId === genre.id}
           />
-      ))}
-
+        ))}
       </div>
-
     </nav>
   )
 }

@@ -31,6 +31,5 @@ export function Content({movies, selectedGenre}: ContentProps) {
         </div>
       </main>
     </div>
-
   )
 }
